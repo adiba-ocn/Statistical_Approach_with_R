@@ -1,0 +1,8 @@
+install.packages(corrplot)
+library(corrplot)
+correlation_matrix<-cor(Nutrient_Dynamics_KE)
+corrplot(correlation_matrix, method="color", type="lower")
+corrplot(correlation_matrix, method="ellipse", type="lower")
+corrplot(correlation_matrix, method="color", type="lower", number.cex = 0.9, tl.cex = 1.0,tl.col="black", tl.strt=45)
+corrplot(correlation_matrix, method="color", type="upper", col= col(200), addCoef.col="black", number.cex = 0.7, tl.cex = 1.0,tl.col="black", tl.strt=45)
+col<- colorRampPalette(c("#BB4444","#EE9988","#FFFFFF","#77AADD","#4477AA"))
